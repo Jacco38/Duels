@@ -1,0 +1,9 @@
+name: Duels
+version: '1.0'
+main: com.jacco.duels.Duels
+api-version: '1.21'
+commands:
+  duel:
+    description: Duel command
+    usage: /duel <player>
+    aliases: [1v1]
