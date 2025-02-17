@@ -17,8 +17,10 @@ public abstract class InventoryGUI implements InventoryHandler {
 
     private final Inventory inventory;
     private final Map<Integer, InventoryButton> buttonMap = new HashMap<>();
+    private final String[] args;
 
-    public InventoryGUI() {
+    public InventoryGUI(String[] args) {
+        this.args = args;
         this.inventory = this.createInventory();
     }
 
@@ -68,6 +70,10 @@ public abstract class InventoryGUI implements InventoryHandler {
         item.setItemMeta(meta);
 
         return item;
+    }
+
+    public String[] getArgs() {
+        return args;
     }
 
     protected abstract Inventory createInventory();

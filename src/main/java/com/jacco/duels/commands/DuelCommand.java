@@ -19,14 +19,28 @@ public class DuelCommand implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
 
         if (args.length == 0) {
-            commandSender.sendMessage("Usage: /duel <player>");
+            commandSender.sendMessage("Usage:");
             return false;
         }
 
+        // Get the target player
         Player target = commandSender.getServer().getPlayer(args[0]);
 
+        // If target is not online
+        if (target == null) {
+            commandSender.sendMessage("Player not found");
+            return false;
+        }
+
         Player player = commandSender.getServer().getPlayer(commandSender.getName());
-        this.guiManager.openGUI(new DuelsMenuInventory(target), player);
+
+        // If target is the same as the player
+        if (target == player) {
+            commandSender.sendMessage("You can't duel yourself");
+            return false;
+        }
+
+        this.guiManager.openGUI(new DuelsMenuInventory(args), player);
 
         return true;
     }

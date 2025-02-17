@@ -9,15 +9,14 @@ import org.bukkit.inventory.ItemStack;
 
 public class DuelsMenuInventory extends InventoryGUI{
 
-    Player target;
-
-    public DuelsMenuInventory(Player target) {
-        this.target = target;
+    public DuelsMenuInventory(String[] args) {
+        super(args);
     }
 
     @Override
     protected Inventory createInventory() {
-        return Bukkit.createInventory(null, 27, "Duel " + this.target.getName());
+        Player target = Bukkit.getPlayer(this.getArgs()[0]);
+        return Bukkit.createInventory(null, 27, "Duel " + target.getName());
     }
 
     @Override

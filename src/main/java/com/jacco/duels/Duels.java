@@ -23,6 +23,7 @@ public final class Duels extends JavaPlugin {
         getServer().getPluginManager().registerEvents(guiListener, this);
         getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
 
+        // Register tab completer
         TabCompleter tabCompleter = new TabCompleter();
 
         // Register commands
