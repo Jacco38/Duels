@@ -1,0 +1,3 @@
+no-permission: "&cYou do not have permission to do that."
+sent-request: "&aRequest sent to &e%player%&a."
+request-received: "&e%player%&a has sent you a request. Type &e/duel accept&a to accept it."

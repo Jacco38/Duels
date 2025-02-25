@@ -18,14 +18,20 @@ public abstract class InventoryGUI implements InventoryHandler {
     private final Inventory inventory;
     private final Map<Integer, InventoryButton> buttonMap = new HashMap<>();
     private final String[] args;
+    private Player owner;
 
-    public InventoryGUI(String[] args) {
+    public InventoryGUI(String[] args, Player owner) {
         this.args = args;
+        this.owner = owner;
         this.inventory = this.createInventory();
     }
 
     public Inventory getInventory() {
         return this.inventory;
+    }
+
+    public Player getOwner() {
+        return this.owner;
     }
 
     public void addButton(int slot, InventoryButton button) {

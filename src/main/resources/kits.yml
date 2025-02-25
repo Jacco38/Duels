@@ -1,0 +1,67 @@
+kits:
+  kit1:
+    name: '&6Diamond Kit'
+    description: '&7This is a diamond kit'
+    icon:
+      material: DIAMOND
+      name: '&6Diamond Kit'
+      lore:
+        - '&7This is a diamond kit'
+        - '&7that is very powerful'
+    enabled: true
+    items:
+      sword:
+        slot: 1
+        material: DIAMOND_SWORD
+        amount: 1
+        name: '&6Diamond Sword'
+        lore:
+          - '&7This is a diamond sword'
+          - '&7that is very sharp'
+        enchants:
+          - DAMAGE_ALL: 5
+          - DURABILITY: 3
+      helmet:
+        slot: HELMET
+        material: DIAMOND_HELMET
+        amount: 1
+        name: '&6Diamond Helmet'
+        lore:
+          - '&7This is a diamond helmet'
+          - '&7that is very protective'
+        enchants:
+          - PROTECTION_ENVIRONMENTAL: 5
+          - DURABILITY: 3
+      chestplate:
+        slot: CHESTPLATE
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        name: '&6Diamond Chestplate'
+        lore:
+          - '&7This is a diamond chestplate'
+          - '&7that is very protective'
+        enchants:
+          - PROTECTION_ENVIRONMENTAL: 5
+          - DURABILITY: 3
+      leggings:
+        slot: LEGGINGS
+        material: DIAMOND_LEGGINGS
+        amount: 1
+        name: '&6Diamond Leggings'
+        lore:
+          - '&7This is a diamond leggings'
+          - '&7that is very protective'
+        enchants:
+          - PROTECTION_ENVIRONMENTAL: 5
+          - DURABILITY: 3
+      boots:
+        slot: BOOTS
+        material: DIAMOND_BOOTS
+        amount: 1
+        name: '&6Diamond Boots'
+        lore:
+          - '&7This is a diamond boots'
+          - '&7that is very protective'
+        enchants:
+          - PROTECTION_ENVIRONMENTAL: 5
+          - DURABILITY: 3

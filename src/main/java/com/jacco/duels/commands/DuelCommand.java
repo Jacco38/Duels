@@ -40,7 +40,7 @@ public class DuelCommand implements CommandExecutor {
             return false;
         }
 
-        this.guiManager.openGUI(new DuelsMenuInventory(args), player);
+        this.guiManager.openGUI(new DuelsMenuInventory(args, player), player);
 
         return true;
     }

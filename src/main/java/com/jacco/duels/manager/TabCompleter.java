@@ -20,11 +20,17 @@ public class TabCompleter implements org.bukkit.command.TabCompleter {
 
         // Check if the command is /duel or /1v1
         if (duelList.contains(command.getName().toLowerCase())) {
+
             List<String> list = new ArrayList<String>();
+
             for (Player p : Bukkit.getOnlinePlayers()) {
-                list.add(p.getName());
+                if (p.getName().toLowerCase().startsWith(args[0].toLowerCase())) {
+                    list.add(p.getName());
+                }
             }
+
             return list;
+
         }
 
         return null;
